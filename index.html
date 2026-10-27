@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Gioia Daily</title>
+  <meta name="theme-color" content="#1E3A2B">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Gioia Daily">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app"></main>
+
+  <!-- Bestätigung -->
+  <div class="overlay" id="frage" hidden>
+    <div class="dialog" role="dialog" aria-modal="true">
+      <p class="dialog-frage" id="frage-text"></p>
+      <p class="dialog-detail" id="frage-detail"></p>
+      <img class="dialog-bild" id="frage-bild" alt="">
+      <div class="dialog-knoepfe">
+        <button class="knopf knopf-leise" id="frage-nein"></button>
+        <button class="knopf" id="frage-ja"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Belohnung -->
+  <div class="overlay" id="belohnung" hidden>
+    <div class="dialog dialog-belohnung" role="dialog" aria-modal="true">
+      <div class="funken" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <p class="belohnung-titel" id="belohnung-titel"></p>
+      <p class="dialog-detail" id="belohnung-text"></p>
+      <img class="belohnung-bild" id="belohnung-bild" alt="">
+      <div class="belohnung-symbol" id="belohnung-symbol"></div>
+      <button class="knopf knopf-breit" id="belohnung-ok"></button>
+    </div>
+  </div>
+
+  <script src="einstellungen.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
