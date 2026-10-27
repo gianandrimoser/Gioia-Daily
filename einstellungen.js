@@ -40,8 +40,8 @@ const EINSTELLUNGEN = {
   // ---- Belohnungs-Fenster -------------------------------------------
   //  {rubrik} wird durch den Namen der Rubrik ersetzt.
   belohnung: {
-    titel: "Ziel erreicht!",
-    text:  "{rubrik} für heute geschafft.",
+    titel: "Wuuup Wuuup 🥳",
+    text:  "Supi gmacht, {rubrik} für hüt erledigt. 😘",
     knopf: "Weiter",
   },
 
