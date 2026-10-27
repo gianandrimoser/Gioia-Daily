@@ -15,7 +15,7 @@ const EINSTELLUNGEN = {
 
   // ---- App ----------------------------------------------------------
   appName: "Gioia Daily",
-  untertitel: "Deine Ziele für heute",
+  untertitel: "Erfüll di Sache und bechum e Belohnig 😉",
 
   // ---- Farben (Farbcodes, z.B. von htmlcolorcodes.com) --------------
   farben: {
@@ -30,10 +30,10 @@ const EINSTELLUNGEN = {
   //  {eintrag} wird automatisch ersetzt, z.B. durch "0,5 L Wasser".
   //  bild: Pfad zu einem Bild/GIF. Leer lassen ("") = kein Bild.
   bestaetigung: {
-    frage: "Hast du das wirklich gemacht?",
+    frage: "Ganz sicher dases gmacht hesch?",
     detail: "{eintrag}",
-    ja:   "Ja",
-    nein: "Nein",
+    ja:   "Natüalisch 😁",
+    nein: "Scusi 🫣",
     bild: "bilder/frage.png",
   },
 
