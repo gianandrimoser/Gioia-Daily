@@ -1,0 +1,47 @@
+# Veröffentlicht die App automatisch nach jeder Änderung
+# und erstellt dabei die Liste aller Belohnungsbilder.
+name: App veröffentlichen
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  veroeffentlichen:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Liste der Belohnungsbilder erstellen
+        run: |
+          python3 - <<'PY'
+          import os, json
+          endungen = ('.jpg', '.jpeg', '.png', '.gif', '.webp', '.avif')
+          liste = {}
+          for ordner in sorted(os.listdir('belohnungen')):
+              pfad = os.path.join('belohnungen', ordner)
+              if os.path.isdir(pfad):
+                  liste[ordner] = sorted(f for f in os.listdir(pfad) if f.lower().endswith(endungen))
+          json.dump(liste, open('bilder.json', 'w'), ensure_ascii=False, indent=1)
+          print(json.dumps(liste, ensure_ascii=False, indent=1))
+          PY
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
