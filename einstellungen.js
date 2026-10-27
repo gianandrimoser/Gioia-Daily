@@ -34,7 +34,7 @@ const EINSTELLUNGEN = {
     detail: "{eintrag}",
     ja:   "Natüalisch 😁",
     nein: "Scusi 🫣",
-    bild: "hundsideeye.jpg",
+    bild: "bilder/hundsideeye.jpg",
   },
 
   // ---- Belohnungs-Fenster -------------------------------------------
