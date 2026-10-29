@@ -74,11 +74,11 @@ const EINSTELLUNGEN = {
     {
       name: "Proteine",
       symbol: "💪",
-      typ: "menge",
-      ziel: 60,
-      einheit: "g",
-      hinweis: "",
-      schnellwahl: [10, 20, 30],
+      typ: "anzahl",
+      ziel: 1,
+      einheit: "Mahlzeit",
+      hinweis: "Einisch öppis proteinhaltigs esse. 😊",
+      knopf: "+1 Mahlzeit",
       ordner: "proteine",
     },
     {
