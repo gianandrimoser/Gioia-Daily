@@ -76,9 +76,9 @@ const EINSTELLUNGEN = {
       symbol: "🐎",
       typ: "anzahl",
       ziel: 2,
-      einheit: "Anzahl",
+      einheit: "Verwöhnige",
       hinweis: "",
-      knopf: "+1 Verwöhnige 😉",
+      knopf: "+1 Verwöhnig 😉",
       ordner: "gudelis",
     },
      {
